@@ -73,10 +73,22 @@ public class ListaEmpleados {
 
     }
 
-    public void mostrarTodos() {
+    public String mostrarInformacion() {
+        String salida =  "";
+        salida+= "\nInformacion de la lista";
+        salida+= "\nEmpleados registrados: " + apuntador;
+        salida+= "\nEspacios disponibles: " + verfificarEspaciosDisponibles();
+
+        return salida;
+    }
+
+     @Override
+    public String toString() {
+        String salida = mostrarInformacion() + "\n";
         for (int i = 0; i < apuntador; i++) {
-            listaEmpleados[i].mostrarInformacion();
+           salida+= listaEmpleados[i].toString() + "\n";
         }
+        return salida;
     }
 
 }
