@@ -5,18 +5,16 @@ public class Empleados implements IReportable {
     protected String nombre;
     protected String identificacion;
     protected int salarioBase;
-    Empleados empleado;
 
     public Empleados() {
 
     }
 
-    public Empleados(String id, String nombre, String identificacion, int salarioBase, Empleados empleado) {
+    public Empleados(String id, String nombre, String identificacion, int salarioBase) {
         this.id = id;
         this.nombre = nombre;
         this.identificacion = identificacion;
         this.salarioBase = salarioBase;
-        this.empleado = empleado;
     }
 
     public void setId(String id) {

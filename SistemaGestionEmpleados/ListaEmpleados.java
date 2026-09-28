@@ -1,12 +1,12 @@
 
 public class ListaEmpleados {
 
-    public int tamanno = 0;
-    public int apuntador = 0;
+    public int tamanno;
+    public int apuntador;
     public Empleados listaEmpleados[];
 
     public ListaEmpleados(int tammano) {
-        this.tamanno = 0;
+        this.tamanno = 5;
         listaEmpleados = new Empleados[tamanno];
     }
 
@@ -57,6 +57,10 @@ public class ListaEmpleados {
 
     public int cantidadDeEmpleados() {
         return apuntador;
+    }
+
+    public int verfificarEspaciosDisponibles() {
+        return tamanno - apuntador;
     }
 
     public Empleados obtenerEmpleado(String id) {

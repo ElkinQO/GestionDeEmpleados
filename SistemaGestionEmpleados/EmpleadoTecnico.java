@@ -6,16 +6,16 @@ public class EmpleadoTecnico extends Empleados {
 
    }
 
-   public EmpleadoTecnico(String id, String nombre, String identificacion, int salarioBase, int horasExtras, Empleados empleado) {
-      super(id, nombre, identificacion, salarioBase, empleado);
+   public EmpleadoTecnico(String id, String nombre, String identificacion, int salarioBase, int horasExtras) {
+      super(id, nombre, identificacion, salarioBase);
       this.horasExtras = horasExtras;
    }
    
-   public void setBonoMensual(int bonoMensual) {
-      this.horasExtras = bonoMensual;
+   public void setHorasExtras(int horasExtras) {
+      this.horasExtras = horasExtras;
    }
 
-   public int getBonoMensual() {
+   public int getHorasExtras() {
       return horasExtras;
    }
 
@@ -23,7 +23,7 @@ public class EmpleadoTecnico extends Empleados {
     public void mostrarInformacion() {
         String salida = " ";
         salida += "\nEmpleado tecnico ";
-        salida += "\nEmpleado: " + (empleado.getId() + empleado.getIdentificacion() + empleado.getNombre() + empleado.getSalarioBase());
+        salida += "\nEmpleado: " + (getId() + getIdentificacion() + getNombre() + getSalarioBase());
         salida += "\nHoras extras trabajadas: " + horasExtras;
     }
 

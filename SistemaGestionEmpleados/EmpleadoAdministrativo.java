@@ -7,8 +7,8 @@ public class EmpleadoAdministrativo extends Empleados {
 
     }
 
-    public EmpleadoAdministrativo(String id, String nombre, String identificacion, int salarioBase, int bonoMensual, Empleados empleado) {
-        super(id, nombre, identificacion, salarioBase, empleado);
+    public EmpleadoAdministrativo(String id, String nombre, String identificacion, int salarioBase, int bonoMensual) {
+        super(id, nombre, identificacion, salarioBase);
         this.bonoMensual = bonoMensual;
     }
 
@@ -24,7 +24,7 @@ public class EmpleadoAdministrativo extends Empleados {
     public void mostrarInformacion() {
         String salida = " ";
         salida += "\nEmpleado tecnico ";
-        salida += "\nEmpleado: " + (empleado.getId() + empleado.getIdentificacion() + empleado.getNombre() + empleado.getSalarioBase());
+        salida += "\nEmpleado: " + (getId() + getIdentificacion() + getNombre() + getSalarioBase());
         salida += "\nBono mensual: " + bonoMensual;
     }
 
