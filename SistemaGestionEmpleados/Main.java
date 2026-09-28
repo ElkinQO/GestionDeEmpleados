@@ -54,13 +54,13 @@ public class Main {
                                 String identificacionAdmin = JOptionPane.showInputDialog("Ingrese la identificacion del empleado");
                                 String nombreAdmin = JOptionPane.showInputDialog("Ingrese el nombre del empleado");
                                 int salarioBaseAdmin = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el salario del empleado"));
-                                int bonoMensualAdmin = Integer.parseInt("Ingrese el bono mensual del empleado");
+                                int bonoMensualAdmin = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el bono mensual del empleado"));
 
                                 EmpleadoAdministrativo empleadoAdministrativo = new EmpleadoAdministrativo(idAdmin,
                                         identificacionAdmin, nombreAdmin, salarioBaseAdmin, bonoMensualAdmin);
-                                if (listaEmpleados.agregar(empleadoAdministrativo)) {
+                                listaEmpleados.agregar(empleadoAdministrativo);
                                     JOptionPane.showMessageDialog(null, "Empleado agregado con exito");
-                                }
+                                
 
                                 break;
 
